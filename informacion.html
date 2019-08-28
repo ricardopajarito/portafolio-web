@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+    * {
+        box-sizing: border-box;
+    }
+    
+    body,
+    html {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: grid;
+    }
+    
+    ul {
+        list-style: decimal;
+        padding: 0px;
+    }
+    
+    img {
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+    
+    h4 {
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #868686;
+        margin: 0px;
+    }
+    
+    header {
+        z-index: 999;
+        position: fixed;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .menu {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        background-color: #eeeeee;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo {
+        padding: 20px;
+        margin: 0px;
+    }
+    
+    .links {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        text-align: center;
+        padding: 20px;
+        margin: 0px;
+    }
+    
+    .links li a {
+        text-decoration: none;
+        color: darkcyan;
+        font-weight: 700;
+    }
+    
+    .hero {
+        min-height: 100vh;
+        display: grid;
+        background: white url(img/hero.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .perfil {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .perfil img {
+        width: 250px;
+        height: auto;
+        border-radius: 50%;
+    }
+    
+    .descripcion {
+        display: grid;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .card {
+        background-color: #eeeeee;
+        border-radius: 12px;
+        padding: 20px;
+    }
+    
+    .hobbies {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 2.5fr 1fr;
+        text-decoration: none;
+        grid-gap: 40px;
+        min-height: 100vh;
+        padding: 20px;
+        grid-template-areas: ". hob inte .";
+    }
+    
+    .hob {
+        grid-area: hob;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hob_img {
+        background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+    
+    .inte {
+        grid-area: inte;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .inte_img {
+        background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+    
+    .txt_info {
+        background-color: transparent;
+        padding: 10px;
+        display: grid;
+        justify-items: center;
+        position: relative;
+    }
+    
+    .estudios {
+        display: grid;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .formacion {
+        display: grid;
+        padding: 20px;
+        grid-gap: 20px;
+    }
+    
+    .cursos {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .curso {
+        display: grid;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+        border-radius: 12px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    
+    .curso:hover {
+        transform: scale(1.05, 1.05);
+    }
+    
+    .txt_formacion {
+        padding: 20px;
+        height: 160px;
+        background-color: #eeeeee;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    
+    .img {
+        display: grid;
+        justify-items: center;
+        padding: 10px;
+        width: 100%;
+        height: 190px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <h1 class="logo">Acerca de mí</h1>
+            <nav>
+                <ul class="links">
+                    <li>
+                        <a href="#">Hobbies / Intereses</a>
+                    </li>
+                    <li>
+                        <a href="#">Educación</a>
+                    </li>
+                    <li>
+                        <a href="#">Formación profesional</a>
+                    </li>
+                    <li>
+                        <a href="#">Portafolio</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="perfil">
+            <img src="img/foto.jpeg" alt="foto">
+        </div>
+
+        <div class="descripcion">
+            <div class="card">
+                <h2>José Ricardo Pajarito Chapuli</h2>
+                <h4>Ingeniero en Ciencias de la Computación</h4>
+                <h2>Objetivo personal</h2>
+                <p>Aplicar mis habilidades en distintas áreas de conocimiento, aportando valor y desempeñandome de manera excelente a cualquier proyecto ya sea acádemico o empresarial.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="hobbies">
+        <div class="hob">
+            <div class="hob_img"></div>
+            <div class="txt_info">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Jugar Videojuegos</li>
+                    <li>Ver series</li>
+                    <li>Jugar Basketball</li>
+                    <li>Escuchar música</li>
+                    <li>Programar</li>
+                    <li>Leer libros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="inte">
+            <div class="inte_img"></div>
+            <div class="txt_info">
+                <h3>Intereses</h3>
+                <ul>
+                    <li>Programación funcional</li>
+                    <li>Programación orientada a objetos</li>
+                    <li>Programación de aplicaciones móviles</li>
+                    <li>Artes visuales</li>
+                    <li>Diseño de interfaces y experiencia de usuario</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="estudios">
+        <h2 style="text-align: center">Educación</h2>
+        <table class="tabla1">
+            <tr>
+                <th>Nivel</th>
+                <th>Escuela</th>
+                <th>Generación</th>
+                <th>Vínculo</th>
+            </tr>
+            <tr>
+                <td>Preescolar</td>
+                <td>Jardín de niños Mitze</td>
+                <td>2001-2002</td>
+                <td>No tiene</td>
+            </tr>
+            <tr>
+                <td>Primaria</td>
+                <td>Luis Casarrubias Ibarra</td>
+                <td>2002-2008</td>
+                <td>No tiene</td>
+            </tr>
+            <tr>
+                <td>Secundaria</td>
+                <td>Técnica No. 20</td>
+                <td>2008-2011</td>
+                <td><a href="http://somostecnica20xoxtla.blogspot.com/2015/07/bienvenidos-somos-tecnica-20-san-miguel.html">somostecnica20xoxtla.blogspot.com</a></td>
+            </tr>
+            <tr>
+                <td>Preparatoria</td>
+                <td>BUAP Preparatoria 2 de Octubre de 1968</td>
+                <td>2011-2014</td>
+                <td><a href="http://www.2deoctubre.buap.mx/">www.2deoctubre.buap.mx</a></td>
+            </tr>
+            <tr>
+                <td>Licenciatura</td>
+                <td>BUAP Ingeniería en Ciencias de la Computación</td>
+                <td>2014-2019</td>
+                <td><a href="www.buap.mx">www.buap.mx</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="formacion">
+        <h2 style="text-align: center">Formación profesional</h2>
+        <div class="cursos">
+            <div class="curso">
+                <div class="img">
+                    <img src="https://urshop.mx/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/c/icono_factura_electronica_6_1_1_1_1_1_1_1_1_1_1_1.png" alt="img1">
+                </div>
+                <div class="txt_formacion">
+                    <h4>Certificado</h4>
+                    <h3>Contpaqi Factura Electrónica</h3>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="img">
+                    <img src="https://brisdan.com/wp-content/uploads/2019/04/Isotipo_Contabilidad.png" alt="conta">
+                </div>
+                <div class="txt_formacion">
+                    <h4>Certificado</h4>
+                    <h3>Contpaqi Contabilidad</h3>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="img">
+                    <img src="https://static.wixstatic.com/media/f47cce_a1e7366a785645cf83dd9f25dba63447~mv2.png/v1/fit/w_2500,h_1330,al_c/f47cce_a1e7366a785645cf83dd9f25dba63447~mv2.png" alt="asesor">
+                </div>
+                <div class="txt_formacion">
+                    <h4>Certificado</h4>
+                    <h3>Asesor Contpaqi</h3>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="img">
+                    <img src="https://icon-library.net/images/node-js-icon/node-js-icon-28.jpg" alt="node">
+                </div>
+                <div class="txt_formacion">
+                    <h4>Certificado udemy</h4>
+                    <h3>Node JS de cero a experto</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
