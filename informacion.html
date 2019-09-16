@@ -1,4 +1,3 @@
-    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,232 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Acerca de mí</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
-    * {
-        box-sizing: border-box;
-    }
-    
-    body,
-    html {
-        font-family: 'Roboto Slab', serif;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        display: grid;
-    }
-    
-    ul {
-        list-style: decimal;
-        padding: 0px;
-    }
-    
-    img {
-        max-width: 100%;
-        display: block;
-        height: 100%;
-    }
-    
-    h4 {
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 2px;
-        color: #868686;
-        margin: 0px;
-    }
-    
-    h3{
-    	font-weight: 400;
-    }
-    table {
-   		width: 100%;
-   		border: 1px solid darkcyan;
-	}
-    th{
-    	background: darkcyan;
-    }
-    th,td{
-    	border: 1px solid darkcyan;
-    }
-    header {
-        z-index: 999;
-        position: fixed;
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-    .menu {
-        display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
-        background-color: #eeeeee;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    }
-    
-    .logo {
-        padding: 20px;
-        margin: 0px;
-    }
-    
-    .links {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-        text-align: center;
-        padding: 20px;
-        margin: 0px;
-    }
-    
-    .links li a {
-        text-decoration: none;
-        color: darkcyan;
-        font-weight: 700;
-    }
-    
-    .hero {
-        min-height: 100vh;
-        display: grid;
-        background: white url(http://www.sclance.com/wallpapers/code-wallpaper/code-wallpaper_417784.jpg);
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
-        position: relative;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .perfil {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
-    
-    .perfil img {
-        width: 250px;
-        height: auto;
-        border-radius: 50%;
-    }
-    
-    .descripcion {
-        display: grid;
-        align-items: center;
-        padding: 20px;
-    }
-    
-    .card {
-        background-color: #eeeeee;
-        border-radius: 12px;
-        padding: 20px;
-    }
-    
-    #hobbies {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr 2.5fr 1fr;
-        text-decoration: none;
-        grid-gap: 40px;
-        min-height: 100vh;
-        padding: 20px;
-        grid-template-areas: ". hob inte .";
-    }
-    
-    .hob {
-        grid-area: hob;
-        border-radius: 12px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hob_img {
-        background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-    }
-    
-    .inte {
-        grid-area: inte;
-        position: relative;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-    
-    .inte_img {
-        background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.2;
-    }
-    
-    .txt_info {
-        background-color: transparent;
-        padding: 10px;
-        display: grid;
-        justify-items: center;
-        position: relative;
-    }
-    
-    #estudios {
-        display: grid;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    #formacion {
-        display: grid;
-        padding: 20px;
-        grid-gap: 20px;
-    }
-    .cursos {
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    
-    .curso {
-        display: grid;
-        transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-        border-radius: 12px;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    }
-    
-    .curso:hover {
-        transform: scale(1.05, 1.05);
-    }
-    
-    .txt_formacion {
-        padding: 20px;
-        height: 160px;
-        background-color: #eeeeee;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-    }
-    
-    .img {
-        display: grid;
-        justify-items: center;
-        padding: 10px;
-        width: 100%;
-        height: 190px;
-    }
-    #portafolio{
-    	display: grid;
-        padding: 20px;
-        grid-gap: 20px;
-    }
-</style>
 
 <body>
 
@@ -244,13 +20,13 @@
                         <a href="#hobbies">Hobbies / Intereses</a>
                     </li>
                     <li>
-                        <a href="#estudios">Académico</a>
+                        <a href="#academico">Académico</a>
                     </li>
                     <li>
-                        <a href="#formacion">Información profesional</a>
+                        <a href="#experiencia">Información profesional</a>
                     </li>
                     <li>
-                        <a href="#portafolio">Proyectos</a>
+                        <a href="#proyectos">Proyectos</a>
                     </li>
                 </ul>
             </nav>
@@ -265,11 +41,13 @@
             <div class="card">
                 <h2>José Ricardo Pajarito Chapuli</h2>
                 <div style="line-height: 9px">
-                	<h3>Edad 23 años</h3>
-	               	<h3>Correo: ricardopch15@gmail.com</h3>
-	               	<h3>Telefono: 2213620716</h3>
+                    <h3>Edad 23 años</h3>
+                    <h3>Correo: ricardopch15@gmail.com</h3>
+                    <h3>Telefono: 2213620716</h3>
                 </div>
                 <h2>Objetivo personal</h2>
+                <p>.</p>
+                <h2>Objetivo profesional</h2>
                 <p>Aplicar mis habilidades en distintas áreas de conocimiento, aportando valor y desempeñandome de manera excelente a cualquier proyecto ya sea acádemico o empresarial.</p>
             </div>
         </div>
@@ -281,12 +59,12 @@
             <div class="txt_info">
                 <h3>Hobbies</h3>
                 <ul>
-                    <li>Jugar Videojuegos</li>
-                    <li>Ver series</li>
+                    <li>Jugar Videojuegos de estrategia</li>
+                    <li>Ver series de suspenso</li>
                     <li>Jugar Basketball</li>
-                    <li>Escuchar música</li>
+                    <li>Escuchar música rock, indie y alternativa</li>
                     <li>Programar</li>
-                    <li>Leer libros</li>
+                    <li>Leer libros de acción</li>
                 </ul>
             </div>
         </div>
@@ -306,55 +84,56 @@
     </div>
 
 
-    <div id="estudios">
+    <div id="academico">
         <h2 style="text-align: center">Académico</h2>
-        <table class="tabla1">
-            <tr>
-                <th>Nivel</th>
-                <th>Escuela</th>
-                <th>Generación</th>
-                <th>Certificado</th>
-            </tr>
-            <tr>
-                <td>Preescolar</td>
-                <td>Jardín de niños Mitze</td>
-                <td>2001-2002</td>
-                <td><a href="#">PDF</a></td>
-            </tr>
-            <tr>
-                <td>Primaria</td>
-                <td>Luis Casarrubias Ibarra</td>
-                <td>2002-2008</td>
-                <td><a href="#">PDF</a></td>
-            </tr>
-            <tr>
-                <td>Secundaria</td>
-                <td><a href="http://somostecnica20xoxtla.blogspot.com/2015/07/bienvenidos-somos-tecnica-20-san-miguel.html">Técnica No. 20</a></td>
-                <td>2008-2011</td>
-                <td><a href="#">PDF</a></td>
-            </tr>
-            <tr>
-                <td>Preparatoria</td>
-                <td><a href="http://www.2deoctubre.buap.mx/">BUAP Preparatoria 2 de Octubre de 1968</a></td>
-                <td>2011-2014</td>
-                <td><a href="#">PDF</a></td>
-            </tr>
-            <tr>
-                <td>Licenciatura</td>
-                <td>Ingeniería en Ciencias de la Computación<br><a href="http://www.buap.mx">Facultad de Ciencias de la Computacion, BUAP</a></td>
-                <td>2014-2019</td>
-                <td><a href="#">PDF</a></td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="formacion">
-        <h2 style="text-align: center">Información profesional</h2>
         <div class="cursos">
             <div class="curso">
-                <div class="img">
-                    <img src="https://urshop.mx/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/c/icono_factura_electronica_6_1_1_1_1_1_1_1_1_1_1_1.png" alt="img1">
+                <div class="img-educacion" style="background-image: url(https://1.bp.blogspot.com/-s7bw6VSqinc/WiiC2tA6ydI/AAAAAAABF0E/pRltMBDoCQAEKN6X_EknaXsI3Rzvl_VrACLcBGAs/s1600/BARDASCORONANGO4.jpg);"></div>
+                <div class="txt_educacion">
+                    <h4>Certificado primaria</h4>
+                    <a href="#">
+                        <h3>Luis Casarrubias Ibarra</h3>
+                    </a>
+                    <h5>2002-2008</h5>
                 </div>
+            </div>
+            <div class="curso">
+                <div class="img-educacion" style="background-image: url(http://www.tecnica20.edu.mx/CIRCULO_PETE.gif);"></div>
+                <div class="txt_educacion">
+                    <h4>Certificado Secundaria</h4>
+                    <a href="http://somostecnica20xoxtla.blogspot.com/2015/07/bienvenidos-somos-tecnica-20-san-miguel.html">
+                        <h3>Técnica No. 20</h3>
+                    </a>
+                    <h5>2008-2011</h5>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="img-educacion" style="background-image: url(http://radiobuap.com/wp-content/uploads/2015/11/DSC_0750.jpg);"></div>
+                <div class="txt_educacion">
+                    <h4>Certificado Preparatoria</h4>
+                    <a href="http://www.2deoctubre.buap.mx/">
+                        <h3>2 de Octubre de 1968</h3>
+                    </a>
+                    <h5>BUAP<br>2011-2014</h5>
+                </div>
+            </div>
+            <div class="curso">
+                <div class="img-educacion" style="background-image: url(http://radiobuap.com/wp-content/uploads/2015/10/Facultad-Ciencias-de-la-Computaci%C3%B3n-2.jpg);"></div>
+                <div class="txt_educacion">
+                    <h4>Certificado Licenciatura</h4>
+                    <a href="https://www.cs.buap.mx">
+                        <h3>Ingeniería en Ciencias de la Computación</h3>
+                    </a>
+                    <h5>Facultad de Ciencias de la Computacion, BUAP <br> 2014-2019</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="formacion">
+        <h3 style="text-align: center">Cursos extracurriculares</h3>
+        <div class="cursos">
+            <div class="curso">
+                <div class="img"><img src="https://urshop.mx/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/c/icono_factura_electronica_6_1_1_1_1_1_1_1_1_1_1_1.png" alt="img1"></div>
                 <div class="txt_formacion">
                     <h4>Certificado</h4>
                     <h3>Contpaqi Factura Electrónica</h3>
@@ -394,67 +173,69 @@
 
         </div>
     </div>
-
-    <div id="portafolio">
-    	<h2 style="text-align: center">Proyectos</h2>
-	    <TABLE>
-	        <TR>
-	            <TH>Nombre</TH> 
-	            <TH>Descripción</TH> 
-	            <TH>Participación</TH>
-	            <TH>Herramientas</TH> 
-	            <TH>Técnicas</TH> 
-	            <TH>Metodologías</TH> 
-	        </TR>
-	        <TR>
-	                <TD>Cajero Automático</TD>
-	                <TD>Elboracion de un sistema que emule un cajero automático de de la CFE</TD> 
-	                <TD>Elabore todo el programa un lenguaje C, utilizando structs como forma de almacenamiento para los usuarios y consulta de saldos y pagos.</TD>
-	                <TD>Lenguaje de programacion C</TD>
-	                <TD>Programacion estructurada</TD> 
-	                <TD>Clásica</TD>
-	        </TR>
-	        <TR>
-	                <TD>Control de un Hospital</TD>
-	                <TD>Elaboración de un sistema que realice consultas a la base de datos para agregar, mostrar, actualizar y elimar datos de pacientes, doctores y recetas médicas.</TD> 
-	                <TD>Elaboré todo el programa, con diseño de la interfaz para manejo de las consulta del lado del frontend y del lado del backend las realizacion de la comunicacion del lado del servidor con la base de datos.</TD>
-	                <TD>Lenguaje de programación Java</TD>
-	                <TD>Programación orientada a objetos</TD> 
-	                <TD>Clásica</TD>
-	        </TR>
-	        <TR>
-	                <TD>Algoritmo Kruskal</TD>
-	                <TD>Algoritmo de Kruskal con listas ordenadas</TD> 
-	                <TD>Diseñe la parte de las búsqueda y ordenación de lo vertices</TD>
-	                <TD>Lenguaje de programación Java</TD>
-	                <TD>Programación Orientada a Objetos</TD> 
-	                <TD>Clásica</TD>
-	        </TR>
-	        <TR>
-	                <TD>Juego controlado con sensores</TD>
-	                <TD>Realización de un juego de computadora con la tarjeta de desarrollo Raspberry Pi que es manejado por un acelerómetro</TD> 
-	                <TD>Realicé la parte de la medición de los grados de inclinación de acuerdo a los datos arrojados desde el acelerómetro para elaborar las sentencias en python y determinar el movimiento del personaje.</TD>
-	                <TD>Lenguaje de programación Python, Raspberry Pi, Acelerómetro</TD>
-	                <TD>Programación orientada a objetos, patrones de diseño de videojuegos</TD> 
-	                <TD>Ágil</TD>
-	        </TR>
-	        <TR>
-	                <TD>Checador de empleados</TD>
-	                <TD>Elaboración de un checador de empleado con CRUD, login de empleados y administradores, creación de permisos y faltas, con conexión a SQL server.</TD>
-	                <TD>Realice la consultas para otorgar permisos y su visualización en el frontend así como el diseño del control de usuarios de administración y usuarios.</TD>
-	                <TD>HTML, PHP, SQL server, JQuery, Bootstrap 4</TD>
-	                <TD>Patrón de diseño MVC</TD>
-	                <TD>Clásica</TD>                
-	        </TR>
-	        <TR>
-	                <TD>Página web para Meraki Consultores Empresariales</TD>
-	                <TD>Realización de una pagina web descriptiva con la finalidad de otorgar una buena navegación a usuarios en la búsqueda de productos y servicios de la empresa, así como la suscripción a usuarios para enviar promociones.</TD>
-	                <TD>Lleve a cabo la realización del diseño, programación e implementación de toda la página y sus pestañas correspondientes.</TD>
-	                <TD>HTML, PHP, SQL server, JQuery, Bootstrap 4</TD>
-	                <TD>Patrón de diseño MVC</TD>
-	                <TD>Ágil</TD>                
-	        </TR>
-	    </TABLE>
+    <div id="experiencia">
+        <h2 style="text-align: center">Información profesional</h2>
+    </div>
+    <div id="proyectos">
+        <h2 style="text-align: center">Proyectos</h2>
+        <TABLE>
+            <TR>
+                <TH>Nombre</TH>
+                <TH>Descripción</TH>
+                <TH>Participación</TH>
+                <TH>Herramientas</TH>
+                <TH>Técnicas</TH>
+                <TH>Metodologías</TH>
+            </TR>
+            <TR>
+                <TD>Cajero Automático</TD>
+                <TD>Elboracion de un sistema que emule un cajero automático de de la CFE</TD>
+                <TD>Elabore todo el programa un lenguaje C, utilizando structs como forma de almacenamiento para los usuarios y consulta de saldos y pagos.</TD>
+                <TD>Lenguaje de programacion C</TD>
+                <TD>Programacion estructurada</TD>
+                <TD>Clásica</TD>
+            </TR>
+            <TR>
+                <TD>Control de un Hospital</TD>
+                <TD>Elaboración de un sistema que realice consultas a la base de datos para agregar, mostrar, actualizar y elimar datos de pacientes, doctores y recetas médicas.</TD>
+                <TD>Elaboré todo el programa, con diseño de la interfaz para manejo de las consulta del lado del frontend y del lado del backend las realizacion de la comunicacion del lado del servidor con la base de datos.</TD>
+                <TD>Lenguaje de programación Java</TD>
+                <TD>Programación orientada a objetos</TD>
+                <TD>Clásica</TD>
+            </TR>
+            <TR>
+                <TD>Algoritmo Kruskal</TD>
+                <TD>Algoritmo de Kruskal con listas ordenadas</TD>
+                <TD>Diseñe la parte de las búsqueda y ordenación de lo vertices</TD>
+                <TD>Lenguaje de programación Java</TD>
+                <TD>Programación Orientada a Objetos</TD>
+                <TD>Clásica</TD>
+            </TR>
+            <TR>
+                <TD>Juego controlado con sensores</TD>
+                <TD>Realización de un juego de computadora con la tarjeta de desarrollo Raspberry Pi que es manejado por un acelerómetro</TD>
+                <TD>Realicé la parte de la medición de los grados de inclinación de acuerdo a los datos arrojados desde el acelerómetro para elaborar las sentencias en python y determinar el movimiento del personaje.</TD>
+                <TD>Lenguaje de programación Python, Raspberry Pi, Acelerómetro</TD>
+                <TD>Programación orientada a objetos, patrones de diseño de videojuegos</TD>
+                <TD>Ágil</TD>
+            </TR>
+            <TR>
+                <TD>Checador de empleados</TD>
+                <TD>Elaboración de un checador de empleado con CRUD, login de empleados y administradores, creación de permisos y faltas, con conexión a SQL server.</TD>
+                <TD>Realice la consultas para otorgar permisos y su visualización en el frontend así como el diseño del control de usuarios de administración y usuarios.</TD>
+                <TD>HTML, PHP, SQL server, JQuery, Bootstrap 4</TD>
+                <TD>Patrón de diseño MVC</TD>
+                <TD>Clásica</TD>
+            </TR>
+            <TR>
+                <TD>Página web para Meraki Consultores Empresariales</TD>
+                <TD>Realización de una pagina web descriptiva con la finalidad de otorgar una buena navegación a usuarios en la búsqueda de productos y servicios de la empresa, así como la suscripción a usuarios para enviar promociones.</TD>
+                <TD>Lleve a cabo la realización del diseño, programación e implementación de toda la página y sus pestañas correspondientes.</TD>
+                <TD>HTML, PHP, SQL server, JQuery, Bootstrap 4</TD>
+                <TD>Patrón de diseño MVC</TD>
+                <TD>Ágil</TD>
+            </TR>
+        </TABLE>
     </div>
 </body>
 
